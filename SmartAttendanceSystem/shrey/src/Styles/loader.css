@@ -1,0 +1,64 @@
+.error {
+  position: absolute;
+  width: 640px;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d00;
+  background: rgba(0, 0, 0, 0.8);
+  font-size: 35px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #d00;
+}
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  z-index: 1;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: -24px;
+  left: 7px;
+  background: #fff;
+  animation-name: rotate;
+  animation-timing-function: cubic-bezier(0.65, 0, 0.58, 1);
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 4px 35px;
+}
+
+.loader:after {
+  animation-delay: 1s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  80% {
+    transform: rotate(360deg)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
+}
